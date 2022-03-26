@@ -1,0 +1,35 @@
+{
+  "name": "hulu-clone-banksmustapha",
+  "version": "1.0.0",
+  "description": "A hulu website clone designed By Banks Mustapha",
+  "main": "main.js",
+  "scripts": {
+    "run-sass": "node-sass sass/main.scss style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/BanksMustapha7/Hulu-Project-Clone.git"
+  },
+  "keywords": [
+    "hulu",
+    "web",
+    "clone",
+    "banks",
+    "banks",
+    "mustapha",
+    "junior",
+    "developer",
+    "front",
+    "end",
+    "project"
+  ],
+  "author": "Banks Mustapha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BanksMustapha7/Hulu-Project-Clone/issues"
+  },
+  "homepage": "https://github.com/BanksMustapha7/Hulu-Project-Clone#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

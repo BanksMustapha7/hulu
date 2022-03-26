@@ -1,0 +1,57 @@
+footer{
+    min-height: 40vh;
+    width: 100%;
+    background-color: #EBEDF2;
+    padding: 1.5rem 5rem;
+    cursor: pointer;
+    & .sect1{
+    
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+        @media screen and (max-width: $mobile){
+            flex-direction: column;
+            gap: 2rem;
+        }
+        & details{
+            margin: 2rem 0;
+        }
+        & summary{
+            font-size: 1.5rem;
+            font-weight: bold;
+            list-style: none;
+            padding: 3rem 0;
+        }
+        & .linkbox{
+            display: flex;
+           gap: 3rem;
+            & ul{
+                list-style: none;
+                font-size: 1.4rem;
+                cursor: pointer;
+               & li{
+                   margin: .75rem;
+                   color: #5E6573;
+                   &:hover{
+                       color: #111;
+                   }
+               }
+            }
+        }
+    }
+
+    & .sect2{
+        padding: 5rem 0;
+        & .icons {
+            display: flex;
+            gap: 4rem;
+            & i{
+                font-size: 3rem;
+                color: #5E6573;
+                &:hover{
+                    color: #111;
+                }
+            }
+        }
+    }
+}

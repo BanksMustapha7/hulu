@@ -1,0 +1,74 @@
+.ad {
+  width: 100%;
+  padding: 2rem 3.5rem;
+  min-height: 17.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: linear-gradient(to right bottom, #081622, #104658);
+  @media screen and (max-width:$mobile) {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  @media (min-width: $mobile) and (max-width: $medium) {
+    @include verticalCenterlize;
+    gap: 3rem;
+  }
+  
+
+  img{
+    width: 40rem;
+    @media (min-width: $mobile) and (max-width: $medium) {
+      width: 35rem;
+    }
+  }
+  & .textAd{
+    display: grid;
+    grid-row-gap: 1.5rem;
+    @media screen and (max-width: $mobile) {
+      @include verticalCenterlize;
+    }
+    @media screen and (min-width: $medium) {   
+      margin: 0 4.5rem;
+    }
+    & h4{
+      @include typicalH4;
+    }
+    & h3{
+      color: #fff;
+      font-weight: 400;
+      font-size: 2.2rem;
+      line-height: 130%;
+    }
+    & small{
+      font-size: 1.25rem;
+      color: $text-grey;
+      text-decoration: underline;
+    }
+  }
+
+  & .getBundle{
+     justify-self: flex-end;
+     @include verticalCenterlize;
+     gap: 1.5rem;
+     @media screen and (min-width: $medium) {
+       margin-left: auto;
+     }
+     @media screen and (max-width: $mobile) {
+        
+     }
+     & button{
+      color: #fff;
+       background: none;
+       padding: 1rem 2rem;
+       border: 2px solid #fff;
+       font-weight: bold;
+     }
+     & small{
+      font-size: 1.25rem;
+      color: $text-grey;
+      text-decoration: underline;
+     }
+  }
+ 
+}

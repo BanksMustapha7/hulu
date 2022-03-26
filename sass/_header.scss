@@ -1,0 +1,80 @@
+header {
+  height: 100vh;
+  background-image: url(../assets/images/header.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 760px) {
+    height: 100vh;
+  }
+  @media screen and (max-width: $mobile){
+      @include verticalCenterlize;
+  }
+
+
+  & .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5rem;
+
+      & h4{
+        color: $h4-color;
+        font-weight: bold;
+      } 
+      & img{
+          width: 40rem;
+          @media screen and (max-width: $mobile) {
+              width: 30rem;
+          }
+      }
+      & h3{
+         color: #fff;
+         font-weight: bold;
+         font-size: 2.2rem;
+      }
+      & .trial{
+          padding: 2rem 3rem;
+          font-weight: 600;
+          font-size: 1.5rem;
+          background-color: $white;
+          border-radius: .4rem;
+          &:hover{
+              background-color: #d8d2d3dc;
+          }
+      }
+      & small{
+          font-size: 1.25rem;
+          color: $text-grey;
+      }
+  }
+}
+
+.log{
+    position: absolute;
+    z-index: 5;
+    height: max-content;
+    width: max-content;
+    top: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    & .logIn {
+        background: none;
+        margin: 1.5rem 0;
+        padding-right: 3rem;
+        color: $text-white;
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 1.7rem;
+    
+        &:hover{
+            color: $text-grey;
+        }
+      }
+}

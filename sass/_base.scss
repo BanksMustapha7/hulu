@@ -1,0 +1,74 @@
+$white: #fff;
+$black: #000;
+$dark: #151516;
+$light-blue: #ebedf2;
+$snow: #f7f7f9;
+
+$text-dark: #333;
+$text-white: #fff;
+$text-grey: #ccc;
+$text-green: #59E983;
+$text-black: #000;
+$text-blue: #4682b4;
+
+$h-font: Rubik, sans-serif;
+$h4-color: $text-green;
+
+$large: 1368px;
+$medium: 768px;
+$mobile: 550px;
+
+@mixin verticalCenterlize {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin typicalH4 {
+  color: $h4-color;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 130%;
+}
+@mixin headings {
+  font-size: 5rem;
+  text-align: center;
+  @media screen and (max-width: $mobile) {
+    font-size: 4rem;
+}
+}
+
+.hidden {
+  display: none !important;
+}
+
+.opaque {
+  filter: blur(1px);
+}
+.underline{
+  text-decoration: underline;
+}
+.point{
+  cursor: pointer;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: inherit;
+}
+body {
+  font-family: Rubik, sans-serif;
+  box-sizing: border-box;
+  line-height: 170%;
+  overflow-x: hidden;
+}
+html {
+  font-size: 62.5%;
+
+  @media screen and(max-width: $medium) {
+    font-size: 50%;
+  }
+}

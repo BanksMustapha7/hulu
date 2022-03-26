@@ -1,0 +1,88 @@
+.highlights {
+  @include verticalCenterlize;
+  min-height: 105vh;
+  width: 100%;
+  background-color: #0e0e0e;
+  color: #fff;
+  padding: 3rem 2rem;
+  gap: 3rem;
+  @media screen and (max-width: $mobile) {
+    gap: 4rem;
+    min-height: 240vh;
+  }
+
+  & h4 {
+    @include typicalH4;
+    text-align: center;
+  }
+  & h2 {
+    @include headings;
+  }
+  & h3 {
+    font-size: 1.75rem;
+    width: 50%;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: center;
+    @media screen and (max-width: $mobile) {
+      width: 75%;
+    }
+  }
+  &__imgSection {
+    height: 40rem;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(28rem, 1fr));
+    row-gap: 40rem;
+    @media screen and (min-width: $large) {
+        width: 94%;
+    }
+  
+    @media screen and (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+      height: 160rem;
+      width: 100%;
+      gap: 6.5rem;
+    }
+
+    & .imagebox {
+      height: 100%;
+      padding: 1rem;
+      @media screen and (max-width: $mobile) {
+        @include verticalCenterlize;
+        
+      }
+  
+    
+      & .img {
+          height: 40rem;
+        position: absolute;
+        width: 30rem;
+        object-fit: fill;
+        z-index: 0;
+        opacity: .6;
+        @media screen and (max-width: $mobile) {
+          width: 32.5rem;
+         & img{
+           width: 100%;
+         }
+          
+        }
+        & img{
+            height: 100%;
+        }
+      }
+      & .text-box{
+          position: absolute;
+          z-index: 2;
+          opacity: 1;
+          & h3, h4{
+              color: #fff;
+               width: max-content;
+              margin: 1rem 1.5rem;
+          }    
+      }
+    }
+  }
+}

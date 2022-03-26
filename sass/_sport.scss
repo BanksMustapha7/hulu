@@ -1,0 +1,96 @@
+.sport {
+  height: 110vh;
+  width: 100%;
+  background-image: url(../assets/images/live-sports.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3.5rem 4rem;
+  transition: all .35s ease-out;
+  @media screen and (max-width: $mobile) {
+      height: 80vh;
+      background-position: left;
+  }
+
+
+  & .links {
+    min-width: 50%;
+    margin: 0 auto;
+    height: max-content;
+    padding: .75rem 0;
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    list-style: none;
+    & li{
+        color: rgba(255, 255, 255, 0.652);
+        font-size: 1.75rem;
+        line-height: 130%;
+        width: max-content;
+        padding: 2rem 0;
+        transition: all .1s ease-in-out;
+        &:hover{
+            border-bottom: 3px solid #fff;
+        }  
+    }
+    & .active{
+        color: #fff;
+        border-bottom: 3px solid #fff;
+    }
+  }
+  & .content{
+      margin-top: 7.5rem;
+      margin-left: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 5rem;
+      gap: 5rem;
+      
+
+      @media screen and (max-width: $mobile){
+          margin-left: 0;
+          @include verticalCenterlize;
+      }
+
+      & h2{
+          @include headings;
+          font-size: 6rem !important;
+          color: #fff;
+          line-height: 130%;
+      }
+      & h3{
+          font-size: 2.4rem;
+          line-height: 150%;
+          font-weight: 400;
+          color: #fff;
+          text-align: left;
+          width: 40%;
+          @media screen and (max-width: $mobile){
+           text-align: center;
+           width: 100%;
+        }
+      }
+      & .channels{
+          display: flex;
+          gap: 3.5rem;
+          align-items: center;
+
+          & .circles{
+              background-color: #fff;
+              border-radius: 50%;
+              padding: .75rem;
+              & img{
+                  width: 3.5rem;
+                  height: 3.5rem;
+                  object-fit: fill;
+              }
+          }
+      }
+      p{
+          color: rgba(238, 238, 238, 0.671);
+          font-size: 1rem;
+          margin-top: -1rem;
+      }
+  }
+}
